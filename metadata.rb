@@ -1,0 +1,7 @@
+name 'dev_box'
+maintainer 'Jason Blalock'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures dev_box'
+long_description 'Installs/Configures dev_box'
+version '0.1.0'
