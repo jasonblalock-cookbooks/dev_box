@@ -1,12 +1,6 @@
 require 'spec_helper'
 
 describe 'dev_box::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
-  end
-
   describe 'dev_box::aux_packages' do
     describe package('vim') do
       it 'is installed' do
