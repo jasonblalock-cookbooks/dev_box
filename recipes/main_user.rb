@@ -19,6 +19,6 @@ end
 
 group 'sudo' do
   action :modify
-  members "#{vault['id']}"
+  members vault['id']
   append true
 end
