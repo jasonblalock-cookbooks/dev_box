@@ -6,3 +6,4 @@
 
 include_recipe 'dev_box::aux_packages'
 include_recipe 'dev_box::main_user'
+include_recipe 'nodejs::default'

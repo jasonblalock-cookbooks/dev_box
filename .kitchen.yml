@@ -19,4 +19,5 @@ suites:
     run_list:
       - recipe[dev_box::aux_packages]
       - recipe[dev_box::main_user]
+      - recipe[nodejs::default]
     attributes:
