@@ -29,4 +29,15 @@ describe 'dev_box::default' do
       end
     end
   end
+
+  describe 'dev_box::docker' do
+    describe package('docker') do
+      expect(subject).to be_installed.with_version('1.10.2')
+    end
+
+    describe service('docker') do
+      expect(subject).to be_enabled
+      expect(subject).to be_running
+    end
+  end
 end
