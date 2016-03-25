@@ -4,6 +4,6 @@
 #
 # Copyright (c) 2016 Jason Blalock, All Rights Reserved.
 
-include_recipe 'apt'
+include_recipe 'apt::default'
 
 package 'vim'

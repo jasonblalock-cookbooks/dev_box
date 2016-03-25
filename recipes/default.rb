@@ -4,7 +4,5 @@
 #
 # Copyright (c) 2016 Jason Blalock, All Rights Reserved.
 
-include_recipe 'apt::default'
 include_recipe 'dev_box::aux_packages'
 include_recipe 'dev_box::main_user'
-include_recipe 'dev_box::docker'
