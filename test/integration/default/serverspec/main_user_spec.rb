@@ -19,4 +19,10 @@ describe 'dev_box::main_user' do
       expect(subject).to have_login_shell('/bin/bash')
     end
   end
+
+  describe file('/home/jason') do
+    it 'exists and is a directory' do
+      expect(subject).to be_directory
+    end
+  end
 end

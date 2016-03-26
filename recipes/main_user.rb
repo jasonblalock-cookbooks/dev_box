@@ -11,8 +11,9 @@ vault = chef_vault_item('users', 'jason')
 group vault['id']
 
 user vault['id'] do
-  group vault['id']
+  supports :manage_home => true
   home "/home/#{vault['id']}"
+  group vault['id']
   shell vault['shell']
   password vault['password']
 end
