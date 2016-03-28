@@ -17,10 +17,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[dev_box::aux_packages]
-      - recipe[dev_box::main_user]
-      - recipe[nodejs::default]
-      - recipe[git::default]
-      - recipe[docker::default]
-#      - recipe[sublime_text::default]
+      - recipe[dev_box::default]
     attributes:
