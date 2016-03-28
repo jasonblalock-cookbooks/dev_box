@@ -6,7 +6,7 @@
 
 include_recipe 'chef-vault'
 
-vault = chef_vault_item('users', 'jason')
+vault = chef_vault_item('users', node['dev_box']['user'])
 
 group vault['id']
 
