@@ -1,5 +1,5 @@
 include_recipe 'nvm::default'
 
 nvm_install 'node' do
-  user 'jason'
+  user node['dev_box']['user']
 end

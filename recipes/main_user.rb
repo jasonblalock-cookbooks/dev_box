@@ -7,8 +7,11 @@
 include_recipe 'chef-vault'
 
 vault = chef_vault_item('users', node['dev_box']['user'])
+Chef::Log.debug("Trying to create user: #{vault['id']}")
+group vault['id'] do
+  action :create
+end
 
-group vault['id']
 
 user vault['id'] do
   supports :manage_home => true
@@ -16,10 +19,13 @@ user vault['id'] do
   group vault['id']
   shell vault['shell']
   password vault['password']
+  action :create
 end
 
-group 'sudo' do
-  action :modify
-  members vault['id']
-  append true
+%w{adm cdrom sudo dip plugdev lpadmin sambashare}.each do |g|
+  group g do
+    action :modify
+    members vault['id']
+    append true
+  end
 end
