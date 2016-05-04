@@ -8,3 +8,4 @@
 #
 
 default['dev_box']['user'] = 'jason'
+default['dev_box']['platform']['distro'] = 'xenial'
