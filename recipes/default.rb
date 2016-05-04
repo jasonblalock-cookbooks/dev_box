@@ -5,7 +5,7 @@
 # Copyright (c) 2016 Jason Blalock, All Rights Reserved.
 
 include_recipe 'apt::default'
-include_recipe 'dev_box::main_user'
+#include_recipe 'dev_box::main_user'
 include_recipe 'chruby_install::default'
 include_recipe 'dev_box::ruby_install'
 include_recipe 'docker::default'
