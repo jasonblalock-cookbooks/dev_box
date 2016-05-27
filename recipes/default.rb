@@ -6,7 +6,7 @@
 
 include_recipe 'apt::default'
 #include_recipe 'dev_box::main_user'
-include_recipe 'chruby_install::default'
+include_recipe 'dev_box::chruby_install'
 include_recipe 'dev_box::ruby_install'
 include_recipe 'dev_box::docker'
 include_recipe 'git::default'
