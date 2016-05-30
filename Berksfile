@@ -3,6 +3,7 @@ source 'https://supermarket.chef.io'
 metadata
 
 cookbook 'docker', git: 'git@github.com:jasonblalock-cookbooks/docker.git'
+cookbook 'dotfiles', git: 'git@github.com:jasonblalock/dotfiles.git'
 cookbook 'nvm', git: 'git@github.com:jasonblalock-cookbooks/nvm.git'
 cookbook 'sublime_text', git: 'git@github.com:jasonblalock-cookbooks/sublime_text.git'
 cookbook 'git', git: 'git@github.com:jasonblalock-cookbooks/git.git'
