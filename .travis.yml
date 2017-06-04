@@ -1,0 +1,28 @@
+sudo: required
+services: docker
+language: ruby
+cache: bundler
+
+rvm: 2.4.1
+
+env:
+  matrix:
+  - TESTS="integration[default-ubuntu-1404,verify]"
+  - TESTS="integration[default-ubuntu-1604,verify]"
+
+before_install:
+- chef --version &> /dev/null || curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk -v 2.0.10
+- eval "$(/opt/chefdk/bin/chef shell-init bash)"
+
+install: chef exec bundle install --jobs=3 --retry=3 --without='integration_vagrant'
+
+# https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+before_script:
+- sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+- chef exec bundle exec ruby --version
+- bundle exec docker version
+- chef exec bundle exec chef --version
+# - bundle exec cookstyle --version
+# - bundle exec foodcritic --version
+
+script: chef exec bundle exec rake $TESTS
