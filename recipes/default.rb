@@ -1,5 +1,5 @@
 #
-# Cookbook:: dev_box2
+# Cookbook:: dev_box
 # Recipe:: default
 #
 # The MIT License (MIT)
@@ -24,3 +24,4 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+apt_update
