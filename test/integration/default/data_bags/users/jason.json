@@ -1,7 +1,0 @@
-{
-  "id": "jason",
-  "password": "$1$2VKOVz/8$8Y2giiyR6mTPc4Grn3Nkx/",
-  "ssh_keys": [],
-  "groups": ["jason"],
-  "shell": "\/bin\/bash"
-}
